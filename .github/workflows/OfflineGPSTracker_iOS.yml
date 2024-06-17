@@ -23,10 +23,10 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7'
+        ruby-version: '2.6'
 
     - name: Install CocoaPods
-      run: sudo gem install cocoapods -v 1.5.3
+      run: sudo gem install cocoapods -v 1.15.0
 
     - name: Install dependencies
       run: pod install --repo-update
