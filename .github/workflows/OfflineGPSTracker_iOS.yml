@@ -33,7 +33,21 @@ jobs:
       working-directory: .  # Adjust if your project is in a subdirectory
 
     - name: Build the app
-      run: xcodebuild -workspace OfflineGPSTracker_iOS.xcworkspace -scheme OfflineGPSTracker_iOS -sdk iphonesimulator -configuration Debug build -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
+      env:
+        # Add environment variables for code signing
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
+        APP_IDENTIFIER: com.example.OfflineGPSTracker_iOS
+        APPLE_ID: ${{ secrets.APPLE_ID }}
+        FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
+        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+      run: |
+        xcodebuild -workspace OfflineGPSTracker_iOS.xcworkspace \
+                   -scheme OfflineGPSTracker_iOS \
+                   -sdk iphonesimulator \
+                   -configuration Debug \
+                   build \
+                   -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
 
     - name: Run tests
       run: xcodebuild test -workspace OfflineGPSTracker_iOS.xcworkspace -scheme OfflineGPSTracker_iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
