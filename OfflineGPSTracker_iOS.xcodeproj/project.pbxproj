@@ -195,14 +195,14 @@
 				ORGANIZATIONNAME = "Amazon Jungle";
 				TargetAttributes = {
 					84B6AB082C1FF52800F33E5C = {
-						CreatedOnToolsVersion = 10.0;
+						CreatedOnToolsVersion = 12.0;
 					};
 					84B6AB1F2C1FF52A00F33E5C = {
-						CreatedOnToolsVersion = 10.0;
+						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 84B6AB082C1FF52800F33E5C;
 					};
 					84B6AB2A2C1FF52A00F33E5C = {
-						CreatedOnToolsVersion = 10.0;
+						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 84B6AB082C1FF52800F33E5C;
 					};
 				};
