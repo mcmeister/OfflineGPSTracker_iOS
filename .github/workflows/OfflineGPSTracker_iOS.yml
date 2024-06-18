@@ -30,7 +30,7 @@ jobs:
 
     - name: Install dependencies
       run: pod install --repo-update
-      working-directory: OfflineGPSTracker_Xcode
+      working-directory: .
 
     - name: Build the app
       run: |
