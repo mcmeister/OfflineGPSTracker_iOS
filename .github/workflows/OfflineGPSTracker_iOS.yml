@@ -30,11 +30,11 @@ jobs:
 
     - name: Install dependencies
       run: pod install --repo-update
-      working-directory: OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode  # Adjust to your project's subdirectory
+      working-directory: OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode
 
     - name: Build the app
       run: |
-        xcodebuild -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode.xcworkspace \
+        xcodebuild -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode/OfflineGPSTracker_Xcode.xcworkspace \
                    -scheme OfflineGPSTracker_Xcode \
                    -sdk iphonesimulator \
                    -configuration Debug \
@@ -43,12 +43,12 @@ jobs:
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
     - name: Run tests
-      run: xcodebuild test -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode.xcworkspace -scheme OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
+      run: xcodebuild test -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode/OfflineGPSTracker_Xcode.xcworkspace -scheme OfflineGPSTracker_Xcode -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
 
     - name: Archive the app
       run: |
-        xcodebuild -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode.xcworkspace \
-                   -scheme OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode \
+        xcodebuild -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode/OfflineGPSTracker_Xcode.xcworkspace \
+                   -scheme OfflineGPSTracker_Xcode \
                    -sdk iphonesimulator \
                    -configuration Release \
                    archive \
@@ -59,10 +59,10 @@ jobs:
         xcodebuild -exportArchive \
                    -archivePath $PWD/build/OfflineGPSTracker_iOS.xcarchive \
                    -exportOptionsPlist ExportOptions.plist \
-                   -exportPath $PWD/build
+                   -exportPath $PWD/build/OfflineGPSTracker_iOS
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
         name: OfflineGPSTracker_iOS
-        path: $PWD/build
+        path: $PWD/build/OfflineGPSTracker_iOS
