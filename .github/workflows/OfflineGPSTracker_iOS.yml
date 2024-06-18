@@ -39,7 +39,8 @@ jobs:
                    -sdk iphonesimulator \
                    -configuration Debug \
                    build \
-                   -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
+                   -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1' \
+                   CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
     - name: Run tests
       run: xcodebuild test -workspace OfflineGPSTracker_iOS.xcworkspace -scheme OfflineGPSTracker_iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
