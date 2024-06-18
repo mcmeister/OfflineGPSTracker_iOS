@@ -75,10 +75,18 @@ jobs:
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU
 
-    - name: Copy export logs
+    - name: Verify and Copy Export Logs
       run: |
-        mkdir -p $GITHUB_WORKSPACE/xcdistributionlogs
-        cp -R /var/folders/**/OfflineGPSTracker_Xcode_*.xcdistributionlogs/* $GITHUB_WORKSPACE/xcdistributionlogs/
+        LOG_DIR=$(ls -td /var/folders/*/*/*/*/OfflineGPSTracker_Xcode_*.xcdistributionlogs | head -1)
+        echo "Log directory: $LOG_DIR"
+        if [ -d "$LOG_DIR" ]; then
+          mkdir -p $GITHUB_WORKSPACE/xcdistributionlogs
+          cp -R "$LOG_DIR"/* $GITHUB_WORKSPACE/xcdistributionlogs/
+          echo "Logs copied successfully."
+        else
+          echo "Log directory not found."
+          exit 1
+        fi
 
     - name: Upload export logs
       uses: actions/upload-artifact@v3
