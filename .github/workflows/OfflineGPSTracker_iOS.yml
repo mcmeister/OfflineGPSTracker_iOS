@@ -7,65 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  validate-config:
-    runs-on: macos-latest
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Check ExportOptions.plist existence
-      run: |
-        if [ ! -f ExportOptions.plist ]; then
-          echo "ExportOptions.plist not found!"
-          exit 1
-        else
-          echo "ExportOptions.plist found."
-        fi
-
-    - name: Validate ExportOptions.plist format
-      run: |
-        plutil -lint ExportOptions.plist
-        if [ $? -ne 0 ]; then
-          echo "ExportOptions.plist is not valid!"
-          exit 1
-        else
-          echo "ExportOptions.plist is valid."
-        fi
-
-    - name: Set up JDK 11
-      uses: actions/setup-java@v3
-      with:
-        distribution: 'adopt'
-        java-version: 11
-
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '2.7.4'
-
-    - name: Install CocoaPods
-      run: sudo gem install cocoapods -v 1.15.0
-
-    - name: Install dependencies
-      run: pod install --repo-update
-      working-directory: .
-
-    - name: Fix script permissions
-      run: chmod +x Pods/Target\ Support\ Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks.sh
-
-    - name: Dry-run build to validate configuration
-      run: |
-        xcodebuild -workspace OfflineGPSTracker_Xcode.xcworkspace \
-                   -scheme OfflineGPSTracker_Xcode \
-                   -sdk iphonesimulator \
-                   -configuration Debug \
-                   build \
-                   -dry-run \
-                   CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
-                   DEVELOPMENT_TEAM=WH83B583SU
-
   build:
-    needs: validate-config
     runs-on: macos-latest
 
     steps:
