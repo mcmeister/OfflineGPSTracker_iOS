@@ -32,6 +32,9 @@ jobs:
       run: pod install --repo-update
       working-directory: .
 
+    - name: Fix script permissions
+      run: chmod +x Pods/Target\ Support\ Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks.sh
+
     - name: Build the app
       run: |
         xcodebuild -workspace OfflineGPSTracker_Xcode.xcworkspace \
@@ -52,17 +55,17 @@ jobs:
                    -sdk iphonesimulator \
                    -configuration Release \
                    archive \
-                   -archivePath $PWD/build/OfflineGPSTracker_iOS.xcarchive
+                   -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive
 
     - name: Export IPA
       run: |
         xcodebuild -exportArchive \
-                   -archivePath $PWD/build/OfflineGPSTracker_iOS.xcarchive \
+                   -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
                    -exportOptionsPlist ExportOptions.plist \
-                   -exportPath $PWD/build/OfflineGPSTracker_iOS
+                   -exportPath $PWD/build/OfflineGPSTracker_Xcode
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
       with:
-        name: OfflineGPSTracker_iOS
-        path: $PWD/build/OfflineGPSTracker_iOS
+        name: OfflineGPSTracker_Xcode
+        path: $PWD/build/OfflineGPSTracker_Xcode
