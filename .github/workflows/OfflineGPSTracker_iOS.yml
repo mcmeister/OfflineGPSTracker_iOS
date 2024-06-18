@@ -47,7 +47,7 @@ jobs:
 
     - name: Archive the app
       run: |
-        xcodebuild -workspace OfflineGPSTracker_Xcde.xcworkspace \
+        xcodebuild -workspace OfflineGPSTracker_Xcode.xcworkspace \
                    -scheme OfflineGPSTracker_Xcode \
                    -sdk iphonesimulator \
                    -configuration Release \
