@@ -61,7 +61,7 @@ jobs:
       run: |
         xcodebuild -exportArchive \
                    -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
-                   -exportOptionsPlist ExportOptions.plist \
+                   -exportOptionsPlist $PWD/ExportOptions.plist \
                    -exportPath $PWD/build/OfflineGPSTracker_Xcode
 
     - name: Upload Artifact
