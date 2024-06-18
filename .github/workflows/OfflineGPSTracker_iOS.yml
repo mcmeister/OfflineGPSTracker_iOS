@@ -72,12 +72,12 @@ jobs:
                    -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
                    -exportOptionsPlist $PWD/ExportOptions.plist \
                    -exportPath $PWD/build/OfflineGPSTracker_Xcode \
-                   CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
+                   CODE_SIGN_IDENTITY="" CODE SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU
 
-    - name: Verify and Copy Export Logs
+    - name: Find and copy export logs
       run: |
-        LOG_DIR=$(ls -td /var/folders/*/*/*/*/OfflineGPSTracker_Xcode_*.xcdistributionlogs | head -1)
+        LOG_DIR=$(ls -td /var/folders/*/*/*/OfflineGPSTracker_Xcode_*.xcdistributionlogs | head -1)
         echo "Log directory: $LOG_DIR"
         if [ -d "$LOG_DIR" ]; then
           mkdir -p $GITHUB_WORKSPACE/xcdistributionlogs
