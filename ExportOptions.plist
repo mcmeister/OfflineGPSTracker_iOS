@@ -5,14 +5,9 @@
     <key>method</key>
     <string>development</string>
     <key>signingStyle</key>
-    <string>manual</string>
+    <string>automatic</string>
     <key>teamID</key>
     <string>WH83B583SU</string>
-    <key>provisioningProfiles</key>
-    <dict>
-        <key>com.example.OfflineGPSTracker_Xcode</key>
-        <string>match Development com.example.OfflineGPSTracker_Xcode</string>
-    </dict>
     <key>compileBitcode</key>
     <false/>
     <key>stripSwiftSymbols</key>

@@ -66,6 +66,14 @@ jobs:
           echo "Archive found and created correctly."
         fi
 
+    - name: Show provisioning profiles
+      run: |
+        security find-identity -p codesigning
+        ls ~/Library/MobileDevice/Provisioning\ Profiles
+
+    - name: Show export options
+      run: cat $PWD/ExportOptions.plist
+
     - name: Export IPA
       run: |
         xcodebuild -exportArchive \
