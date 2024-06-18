@@ -33,14 +33,6 @@ jobs:
       working-directory: .  # Adjust if your project is in a subdirectory
 
     - name: Build the app
-      env:
-        # Add environment variables for code signing
-        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-        MATCH_GIT_URL: ${{ secrets.MATCH_GIT_URL }}
-        APP_IDENTIFIER: com.example.OfflineGPSTracker_iOS
-        APPLE_ID: ${{ secrets.APPLE_ID }}
-        FASTLANE_USER: ${{ secrets.FASTLANE_USER }}
-        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
       run: |
         xcodebuild -workspace OfflineGPSTracker_iOS.xcworkspace \
                    -scheme OfflineGPSTracker_iOS \
