@@ -20,6 +20,6 @@
     <key>destination</key>
     <string>export</string>
     <key>thinning</key>
-    <string><none></string>
+    <string>&lt;none&gt;</string>
 </dict>
 </plist>
