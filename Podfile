@@ -1,5 +1,8 @@
 platform :ios, '12.0'
 
+# Specify the Xcode project or workspace
+project 'OfflineGPSTracker_iOS.xcodeproj'
+
 target 'OfflineGPSTracker_iOS' do
   use_frameworks!
 

@@ -23,7 +23,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7.4'  # Specify Ruby 2.7.4 or later
+        ruby-version: '2.7.4'
 
     - name: Install CocoaPods
       run: sudo gem install cocoapods -v 1.15.0
@@ -46,4 +46,23 @@ jobs:
       run: xcodebuild test -workspace OfflineGPSTracker_iOS.xcworkspace -scheme OfflineGPSTracker_iOS -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1'
 
     - name: Archive the app
-      run: xcodebuild -workspace OfflineGPSTracker_iOS.xcworkspace -scheme OfflineGPSTracker_iOS -sdk iphonesimulator -configuration Release archive -archivePath $PWD/build/OfflineGPSTracker_iOS.xcarchive
+      run: |
+        xcodebuild -workspace OfflineGPSTracker_iOS.xcworkspace \
+                   -scheme OfflineGPSTracker_iOS \
+                   -sdk iphonesimulator \
+                   -configuration Release \
+                   archive \
+                   -archivePath $PWD/build/OfflineGPSTracker_iOS.xcarchive
+
+    - name: Export IPA
+      run: |
+        xcodebuild -exportArchive \
+                   -archivePath $PWD/build/OfflineGPSTracker_iOS.xcarchive \
+                   -exportOptionsPlist ExportOptions.plist \
+                   -exportPath $PWD/build
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: OfflineGPSTracker_iOS
+        path: $PWD/build
