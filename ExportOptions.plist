@@ -10,9 +10,7 @@
     <true/>
     <key>compileBitcode</key>
     <false/>
-    <key>destination</key>
-    <string>export</string>
-    <key>thinning</key>
-    <string>&lt;none&gt;</string>
+    <key>teamID</key>
+    <string>WH83B583SU</string>
 </dict>
 </plist>
