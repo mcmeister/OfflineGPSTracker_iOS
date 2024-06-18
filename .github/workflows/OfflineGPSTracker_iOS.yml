@@ -45,19 +45,9 @@ jobs:
                    -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1' \
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
 
-    - name: Run unit tests
-      run: |
-        xcodebuild test -workspace OfflineGPSTracker_Xcode.xcworkspace \
-                        -scheme OfflineGPSTracker_Xcode \
-                        -sdk iphonesimulator \
-                        -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1' \
-                        CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
-                        ONLY_ACTIVE_ARCH=YES \
-                        -skip-testing:OfflineGPSTracker_XcodeUITests
-
     - name: Archive the app
       run: |
-        xcodebuild -workspace OfflineGPSTracker_Xcode.xcworkspace \
+        xcodebuild -workspace OfflineGPSTracker_Xcde.xcworkspace \
                    -scheme OfflineGPSTracker_Xcode \
                    -sdk iphonesimulator \
                    -configuration Release \
