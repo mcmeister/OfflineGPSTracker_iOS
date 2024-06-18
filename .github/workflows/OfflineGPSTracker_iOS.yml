@@ -77,7 +77,8 @@ jobs:
 
     - name: Copy export logs
       run: |
-        cp -R /var/folders/**/OfflineGPSTracker_Xcode_*.xcdistributionlogs $GITHUB_WORKSPACE/xcdistributionlogs
+        mkdir -p $GITHUB_WORKSPACE/xcdistributionlogs
+        cp -R /var/folders/**/OfflineGPSTracker_Xcode_*.xcdistributionlogs/* $GITHUB_WORKSPACE/xcdistributionlogs/
 
     - name: Upload export logs
       uses: actions/upload-artifact@v3
