@@ -66,20 +66,14 @@ jobs:
           echo "Archive found and created correctly."
         fi
 
-    - name: Show provisioning profiles
-      run: |
-        security find-identity -p codesigning
-        ls ~/Library/MobileDevice/Provisioning\ Profiles
-
-    - name: Show export options
-      run: cat $PWD/ExportOptions.plist
-
     - name: Export IPA
       run: |
         xcodebuild -exportArchive \
                    -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
                    -exportOptionsPlist $PWD/ExportOptions.plist \
-                   -exportPath $PWD/build/OfflineGPSTracker_Xcode
+                   -exportPath $PWD/build/OfflineGPSTracker_Xcode \
+                   CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
+                   DEVELOPMENT_TEAM=WH83B583SU
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
