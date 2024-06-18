@@ -1,0 +1,6 @@
+framework module Pods_OfflineGPSTracker_XcodeUITests {
+  umbrella header "Pods-OfflineGPSTracker_XcodeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

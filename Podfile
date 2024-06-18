@@ -1,21 +1,19 @@
+# Uncomment the next line to define a global platform for your project
 platform :ios, '12.0'
 
-# Specify the Xcode project or workspace
-project 'OfflineGPSTracker_iOS.xcodeproj'
-
-target 'OfflineGPSTracker_iOS' do
+target 'OfflineGPSTracker_Xcode' do
+  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for OfflineGPSTracker_iOS
+  # Pods for OfflineGPSTracker_Xcode
   pod 'Alamofire', '~> 5.4'
-  pod 'SwiftyJSON', '~> 5.0'
 
-  target 'OfflineGPSTracker_iOSTests' do
+  target 'OfflineGPSTracker_XcodeTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'OfflineGPSTracker_iOSUITests' do
+  target 'OfflineGPSTracker_XcodeUITests' do
     inherit! :search_paths
     # Pods for UI testing
   end

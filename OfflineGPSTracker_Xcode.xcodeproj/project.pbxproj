@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84FDD17F2C2165BF00977417 /* OfflineGPSTracker_XcodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDD17E2C2165BF00977417 /* OfflineGPSTracker_XcodeApp.swift */; };
+		84FDD1812C2165BF00977417 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDD1802C2165BF00977417 /* ContentView.swift */; };
+		84FDD1832C2165C000977417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FDD1822C2165C000977417 /* Assets.xcassets */; };
+		84FDD1862C2165C000977417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84FDD1852C2165C000977417 /* Preview Assets.xcassets */; };
+		84FDD1912C2165C100977417 /* OfflineGPSTracker_XcodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDD1902C2165C100977417 /* OfflineGPSTracker_XcodeTests.swift */; };
+		84FDD19C2C2165C100977417 /* OfflineGPSTracker_XcodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDD19B2C2165C100977417 /* OfflineGPSTracker_XcodeUITests.swift */; };
+		84FDD1B32C21682C00977417 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 84FDD1B22C21682C00977417 /* Podfile */; };
+		871D16601356CDBE7DE36C43 /* Pods_OfflineGPSTracker_Xcode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7391F3873C243092DA471BB8 /* Pods_OfflineGPSTracker_Xcode.framework */; };
+		AD119572459573CE8D35DA22 /* Pods_OfflineGPSTracker_XcodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B77E6C67F8FB05B950A97E6 /* Pods_OfflineGPSTracker_XcodeUITests.framework */; };
+		F0259E184FB339C5200CFE2F /* Pods_OfflineGPSTracker_XcodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D4E8BA9E33003F06221089 /* Pods_OfflineGPSTracker_XcodeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84FDD18D2C2165C100977417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84FDD1732C2165BF00977417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84FDD17A2C2165BF00977417;
+			remoteInfo = OfflineGPSTracker_Xcode;
+		};
+		84FDD1982C2165C100977417 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84FDD1732C2165BF00977417 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84FDD17A2C2165BF00977417;
+			remoteInfo = OfflineGPSTracker_Xcode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02D4E8BA9E33003F06221089 /* Pods_OfflineGPSTracker_XcodeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfflineGPSTracker_XcodeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B77E6C67F8FB05B950A97E6 /* Pods_OfflineGPSTracker_XcodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfflineGPSTracker_XcodeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		35B247125A72B7AFEF94A91E /* Pods-OfflineGPSTracker_Xcode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_Xcode.debug.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode.debug.xcconfig"; sourceTree = "<group>"; };
+		7391F3873C243092DA471BB8 /* Pods_OfflineGPSTracker_Xcode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfflineGPSTracker_Xcode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78E12F74183FF8E77229B832 /* Pods-OfflineGPSTracker_XcodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_XcodeTests.debug.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_XcodeTests/Pods-OfflineGPSTracker_XcodeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D2A3EF02ED950CF7B0AAB84 /* Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.debug.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests/Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7ED36729BC24E2E40067EBFD /* Pods-OfflineGPSTracker_XcodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_XcodeTests.release.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_XcodeTests/Pods-OfflineGPSTracker_XcodeTests.release.xcconfig"; sourceTree = "<group>"; };
+		84FDD17B2C2165BF00977417 /* OfflineGPSTracker_Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineGPSTracker_Xcode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FDD17E2C2165BF00977417 /* OfflineGPSTracker_XcodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineGPSTracker_XcodeApp.swift; sourceTree = "<group>"; };
+		84FDD1802C2165BF00977417 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84FDD1822C2165C000977417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84FDD1852C2165C000977417 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		84FDD1872C2165C000977417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FDD18C2C2165C100977417 /* OfflineGPSTracker_XcodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfflineGPSTracker_XcodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FDD1902C2165C100977417 /* OfflineGPSTracker_XcodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineGPSTracker_XcodeTests.swift; sourceTree = "<group>"; };
+		84FDD1922C2165C100977417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FDD1972C2165C100977417 /* OfflineGPSTracker_XcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OfflineGPSTracker_XcodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FDD19B2C2165C100977417 /* OfflineGPSTracker_XcodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineGPSTracker_XcodeUITests.swift; sourceTree = "<group>"; };
+		84FDD19D2C2165C100977417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84FDD1B22C21682C00977417 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BBCD0192E450CE949926F886 /* Pods-OfflineGPSTracker_XcodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_XcodeUITests.release.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_XcodeUITests/Pods-OfflineGPSTracker_XcodeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C9E8500B42423614DFA8DD25 /* Pods-OfflineGPSTracker_Xcode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_Xcode.release.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode.release.xcconfig"; sourceTree = "<group>"; };
+		E77FC303B65F886BFFFAFB8B /* Pods-OfflineGPSTracker_XcodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_XcodeUITests.debug.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_XcodeUITests/Pods-OfflineGPSTracker_XcodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE0436430F85E11546C06045 /* Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.release.xcconfig"; path = "Target Support Files/Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests/Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84FDD1782C2165BF00977417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				871D16601356CDBE7DE36C43 /* Pods_OfflineGPSTracker_Xcode.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FDD1892C2165C100977417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0259E184FB339C5200CFE2F /* Pods_OfflineGPSTracker_XcodeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FDD1942C2165C100977417 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD119572459573CE8D35DA22 /* Pods_OfflineGPSTracker_XcodeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71D702304A25A71995577475 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7391F3873C243092DA471BB8 /* Pods_OfflineGPSTracker_Xcode.framework */,
+				02D4E8BA9E33003F06221089 /* Pods_OfflineGPSTracker_XcodeTests.framework */,
+				2B77E6C67F8FB05B950A97E6 /* Pods_OfflineGPSTracker_XcodeUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84FDD1722C2165BF00977417 = {
+			isa = PBXGroup;
+			children = (
+				84FDD1B22C21682C00977417 /* Podfile */,
+				84FDD17D2C2165BF00977417 /* OfflineGPSTracker_Xcode */,
+				84FDD18F2C2165C100977417 /* OfflineGPSTracker_XcodeTests */,
+				84FDD19A2C2165C100977417 /* OfflineGPSTracker_XcodeUITests */,
+				84FDD17C2C2165BF00977417 /* Products */,
+				A020E95851041341CC0FE60D /* Pods */,
+				71D702304A25A71995577475 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		84FDD17C2C2165BF00977417 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84FDD17B2C2165BF00977417 /* OfflineGPSTracker_Xcode.app */,
+				84FDD18C2C2165C100977417 /* OfflineGPSTracker_XcodeTests.xctest */,
+				84FDD1972C2165C100977417 /* OfflineGPSTracker_XcodeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84FDD17D2C2165BF00977417 /* OfflineGPSTracker_Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				84FDD17E2C2165BF00977417 /* OfflineGPSTracker_XcodeApp.swift */,
+				84FDD1802C2165BF00977417 /* ContentView.swift */,
+				84FDD1822C2165C000977417 /* Assets.xcassets */,
+				84FDD1872C2165C000977417 /* Info.plist */,
+				84FDD1842C2165C000977417 /* Preview Content */,
+			);
+			path = OfflineGPSTracker_Xcode;
+			sourceTree = "<group>";
+		};
+		84FDD1842C2165C000977417 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				84FDD1852C2165C000977417 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84FDD18F2C2165C100977417 /* OfflineGPSTracker_XcodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				84FDD1902C2165C100977417 /* OfflineGPSTracker_XcodeTests.swift */,
+				84FDD1922C2165C100977417 /* Info.plist */,
+			);
+			path = OfflineGPSTracker_XcodeTests;
+			sourceTree = "<group>";
+		};
+		84FDD19A2C2165C100977417 /* OfflineGPSTracker_XcodeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84FDD19B2C2165C100977417 /* OfflineGPSTracker_XcodeUITests.swift */,
+				84FDD19D2C2165C100977417 /* Info.plist */,
+			);
+			path = OfflineGPSTracker_XcodeUITests;
+			sourceTree = "<group>";
+		};
+		A020E95851041341CC0FE60D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35B247125A72B7AFEF94A91E /* Pods-OfflineGPSTracker_Xcode.debug.xcconfig */,
+				C9E8500B42423614DFA8DD25 /* Pods-OfflineGPSTracker_Xcode.release.xcconfig */,
+				7D2A3EF02ED950CF7B0AAB84 /* Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.debug.xcconfig */,
+				EE0436430F85E11546C06045 /* Pods-OfflineGPSTracker_Xcode-OfflineGPSTracker_XcodeUITests.release.xcconfig */,
+				78E12F74183FF8E77229B832 /* Pods-OfflineGPSTracker_XcodeTests.debug.xcconfig */,
+				7ED36729BC24E2E40067EBFD /* Pods-OfflineGPSTracker_XcodeTests.release.xcconfig */,
+				E77FC303B65F886BFFFAFB8B /* Pods-OfflineGPSTracker_XcodeUITests.debug.xcconfig */,
+				BBCD0192E450CE949926F886 /* Pods-OfflineGPSTracker_XcodeUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84FDD17A2C2165BF00977417 /* OfflineGPSTracker_Xcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FDD1A02C2165C100977417 /* Build configuration list for PBXNativeTarget "OfflineGPSTracker_Xcode" */;
+			buildPhases = (
+				031CC6ED53DCD1AD3EE5BCA8 /* [CP] Check Pods Manifest.lock */,
+				84FDD1772C2165BF00977417 /* Sources */,
+				84FDD1782C2165BF00977417 /* Frameworks */,
+				84FDD1792C2165BF00977417 /* Resources */,
+				9810DB3718B0187B4273A6E8 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OfflineGPSTracker_Xcode;
+			productName = OfflineGPSTracker_Xcode;
+			productReference = 84FDD17B2C2165BF00977417 /* OfflineGPSTracker_Xcode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84FDD18B2C2165C100977417 /* OfflineGPSTracker_XcodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FDD1A32C2165C100977417 /* Build configuration list for PBXNativeTarget "OfflineGPSTracker_XcodeTests" */;
+			buildPhases = (
+				3762479BC8E113904B298649 /* [CP] Check Pods Manifest.lock */,
+				84FDD1882C2165C100977417 /* Sources */,
+				84FDD1892C2165C100977417 /* Frameworks */,
+				84FDD18A2C2165C100977417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84FDD18E2C2165C100977417 /* PBXTargetDependency */,
+			);
+			name = OfflineGPSTracker_XcodeTests;
+			productName = OfflineGPSTracker_XcodeTests;
+			productReference = 84FDD18C2C2165C100977417 /* OfflineGPSTracker_XcodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84FDD1962C2165C100977417 /* OfflineGPSTracker_XcodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FDD1A62C2165C100977417 /* Build configuration list for PBXNativeTarget "OfflineGPSTracker_XcodeUITests" */;
+			buildPhases = (
+				E6A0B9A26F8D67C7AF98BD52 /* [CP] Check Pods Manifest.lock */,
+				84FDD1932C2165C100977417 /* Sources */,
+				84FDD1942C2165C100977417 /* Frameworks */,
+				84FDD1952C2165C100977417 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84FDD1992C2165C100977417 /* PBXTargetDependency */,
+			);
+			name = OfflineGPSTracker_XcodeUITests;
+			productName = OfflineGPSTracker_XcodeUITests;
+			productReference = 84FDD1972C2165C100977417 /* OfflineGPSTracker_XcodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84FDD1732C2165BF00977417 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				ORGANIZATIONNAME = "Amazon Jungle";
+				TargetAttributes = {
+					84FDD17A2C2165BF00977417 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					84FDD18B2C2165C100977417 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 84FDD17A2C2165BF00977417;
+					};
+					84FDD1962C2165C100977417 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 84FDD17A2C2165BF00977417;
+					};
+				};
+			};
+			buildConfigurationList = 84FDD1762C2165BF00977417 /* Build configuration list for PBXProject "OfflineGPSTracker_Xcode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84FDD1722C2165BF00977417;
+			productRefGroup = 84FDD17C2C2165BF00977417 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84FDD17A2C2165BF00977417 /* OfflineGPSTracker_Xcode */,
+				84FDD18B2C2165C100977417 /* OfflineGPSTracker_XcodeTests */,
+				84FDD1962C2165C100977417 /* OfflineGPSTracker_XcodeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84FDD1792C2165BF00977417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FDD1B32C21682C00977417 /* Podfile in Resources */,
+				84FDD1862C2165C000977417 /* Preview Assets.xcassets in Resources */,
+				84FDD1832C2165C000977417 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FDD18A2C2165C100977417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FDD1952C2165C100977417 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		031CC6ED53DCD1AD3EE5BCA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OfflineGPSTracker_Xcode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3762479BC8E113904B298649 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OfflineGPSTracker_XcodeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9810DB3718B0187B4273A6E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6A0B9A26F8D67C7AF98BD52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OfflineGPSTracker_XcodeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84FDD1772C2165BF00977417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FDD1812C2165BF00977417 /* ContentView.swift in Sources */,
+				84FDD17F2C2165BF00977417 /* OfflineGPSTracker_XcodeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FDD1882C2165C100977417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FDD1912C2165C100977417 /* OfflineGPSTracker_XcodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FDD1932C2165C100977417 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84FDD19C2C2165C100977417 /* OfflineGPSTracker_XcodeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84FDD18E2C2165C100977417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84FDD17A2C2165BF00977417 /* OfflineGPSTracker_Xcode */;
+			targetProxy = 84FDD18D2C2165C100977417 /* PBXContainerItemProxy */;
+		};
+		84FDD1992C2165C100977417 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84FDD17A2C2165BF00977417 /* OfflineGPSTracker_Xcode */;
+			targetProxy = 84FDD1982C2165C100977417 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		84FDD19E2C2165C100977417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84FDD19F2C2165C100977417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84FDD1A12C2165C100977417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35B247125A72B7AFEF94A91E /* Pods-OfflineGPSTracker_Xcode.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Don't Sign";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"OfflineGPSTracker_Xcode/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OfflineGPSTracker_Xcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.OfflineGPSTracker-Xcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		84FDD1A22C2165C100977417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E8500B42423614DFA8DD25 /* Pods-OfflineGPSTracker_Xcode.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Don't Sign";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_ASSET_PATHS = "\"OfflineGPSTracker_Xcode/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OfflineGPSTracker_Xcode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.OfflineGPSTracker-Xcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		84FDD1A42C2165C100977417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E12F74183FF8E77229B832 /* Pods-OfflineGPSTracker_XcodeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineGPSTracker_XcodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.OfflineGPSTracker-XcodeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfflineGPSTracker_Xcode.app/OfflineGPSTracker_Xcode";
+			};
+			name = Debug;
+		};
+		84FDD1A52C2165C100977417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7ED36729BC24E2E40067EBFD /* Pods-OfflineGPSTracker_XcodeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineGPSTracker_XcodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.OfflineGPSTracker-XcodeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OfflineGPSTracker_Xcode.app/OfflineGPSTracker_Xcode";
+			};
+			name = Release;
+		};
+		84FDD1A72C2165C100977417 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E77FC303B65F886BFFFAFB8B /* Pods-OfflineGPSTracker_XcodeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineGPSTracker_XcodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.OfflineGPSTracker-XcodeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OfflineGPSTracker_Xcode;
+			};
+			name = Debug;
+		};
+		84FDD1A82C2165C100977417 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBCD0192E450CE949926F886 /* Pods-OfflineGPSTracker_XcodeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OfflineGPSTracker_XcodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.OfflineGPSTracker-XcodeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OfflineGPSTracker_Xcode;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84FDD1762C2165BF00977417 /* Build configuration list for PBXProject "OfflineGPSTracker_Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FDD19E2C2165C100977417 /* Debug */,
+				84FDD19F2C2165C100977417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FDD1A02C2165C100977417 /* Build configuration list for PBXNativeTarget "OfflineGPSTracker_Xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FDD1A12C2165C100977417 /* Debug */,
+				84FDD1A22C2165C100977417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FDD1A32C2165C100977417 /* Build configuration list for PBXNativeTarget "OfflineGPSTracker_XcodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FDD1A42C2165C100977417 /* Debug */,
+				84FDD1A52C2165C100977417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FDD1A62C2165C100977417 /* Build configuration list for PBXNativeTarget "OfflineGPSTracker_XcodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FDD1A72C2165C100977417 /* Debug */,
+				84FDD1A82C2165C100977417 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84FDD1732C2165BF00977417 /* Project object */;
+}

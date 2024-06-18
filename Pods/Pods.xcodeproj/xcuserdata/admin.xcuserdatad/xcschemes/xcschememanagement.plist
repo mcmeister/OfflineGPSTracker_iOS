@@ -14,27 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-OfflineGPSTracker_iOS.xcscheme</key>
+		<key>Pods-OfflineGPSTracker_Xcode.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-OfflineGPSTracker_iOSTests.xcscheme</key>
+		<key>Pods-OfflineGPSTracker_XcodeTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-OfflineGPSTracker_iOSUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON-SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
+		<key>Pods-OfflineGPSTracker_XcodeUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
