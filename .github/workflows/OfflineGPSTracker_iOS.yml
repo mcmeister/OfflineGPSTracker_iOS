@@ -81,6 +81,10 @@ jobs:
                    | tee export.log
       working-directory: .
 
+    - name: List build directory contents
+      run: ls -la "$GITHUB_WORKSPACE/build/OfflineGPSTracker_Xcode"
+      working-directory: .
+
     - name: Find and copy export logs
       run: |
         LOG_DIR=$(ls -td /var/folders/*/*/*/OfflineGPSTracker_Xcode_*.xcdistributionlogs | head -1)
