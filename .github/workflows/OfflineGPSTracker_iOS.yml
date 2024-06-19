@@ -73,7 +73,8 @@ jobs:
                    -exportOptionsPlist $PWD/ExportOptions.plist \
                    -exportPath $PWD/build/OfflineGPSTracker_Xcode \
                    CODE_SIGN_IDENTITY="" CODE SIGNING_REQUIRED=NO \
-                   DEVELOPMENT_TEAM=WH83B583SU
+                   DEVELOPMENT_TEAM=WH83B583SU \
+                   | tee export.log
 
     - name: Find and copy export logs
       run: |
@@ -93,6 +94,12 @@ jobs:
       with:
         name: xcdistributionlogs
         path: xcdistributionlogs
+
+    - name: Upload build log
+      uses: actions/upload-artifact@v3
+      with:
+        name: export-log
+        path: export.log
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3

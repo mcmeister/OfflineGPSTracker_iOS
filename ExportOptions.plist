@@ -5,7 +5,7 @@
     <key>method</key>
     <string>development</string>
     <key>signingStyle</key>
-    <string>manual</string>
+    <string>automatic</string>
     <key>teamID</key>
     <string>WH83B583SU</string>
     <key>compileBitcode</key>
@@ -16,5 +16,9 @@
     <string>export</string>
     <key>thinning</key>
     <string>&lt;none&gt;</string>
+    <key>manageAppVersionAndBuildNumber</key>
+    <true/>
+    <key>iCloudContainerEnvironment</key>
+    <string>Development</string>
 </dict>
 </plist>
