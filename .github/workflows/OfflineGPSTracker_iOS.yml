@@ -33,7 +33,7 @@ jobs:
       working-directory: .
 
     - name: Fix script permissions
-      run: chmod +x OfflineGPSTracker_iOS/Pods/Target\ Support\ Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks.sh
+      run: chmod +x Pods/Target\ Support\ Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks.sh
 
     - name: Build the app
       run: |
