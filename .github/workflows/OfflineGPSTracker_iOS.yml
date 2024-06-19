@@ -30,7 +30,7 @@ jobs:
 
     - name: Install dependencies
       run: pod install --repo-update
-      working-directory: OfflineGPSTracker_iOS
+      working-directory: .
 
     - name: Fix script permissions
       run: chmod +x OfflineGPSTracker_iOS/Pods/Target\ Support\ Files/Pods-OfflineGPSTracker_Xcode/Pods-OfflineGPSTracker_Xcode-frameworks.sh
@@ -45,7 +45,7 @@ jobs:
                    -destination 'platform=iOS Simulator,name=iPhone 11,OS=12.1' \
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU
-      working-directory: OfflineGPSTracker_iOS
+      working-directory: .
 
     - name: Archive the app
       run: |
@@ -57,7 +57,7 @@ jobs:
                    -archivePath $PWD/OfflineGPSTracker_iOS/build/OfflineGPSTracker_Xcode.xcarchive \
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU
-      working-directory: OfflineGPSTracker_iOS
+      working-directory: .
 
     - name: Validate archive
       run: |
@@ -68,7 +68,7 @@ jobs:
           echo "Archive found and created correctly."
           ls -la $PWD/OfflineGPSTracker_iOS/build/
         fi
-      working-directory: OfflineGPSTracker_iOS
+      working-directory: .
 
     - name: Export IPA
       run: |
@@ -79,7 +79,7 @@ jobs:
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU \
                    | tee export.log
-      working-directory: OfflineGPSTracker_iOS
+      working-directory: .
 
     - name: Find and copy export logs
       run: |
