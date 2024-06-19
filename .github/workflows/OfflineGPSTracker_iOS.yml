@@ -54,28 +54,28 @@ jobs:
                    -sdk iphonesimulator \
                    -configuration Release \
                    archive \
-                   -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
+                   -archivePath $GITHUB_WORKSPACE/build/OfflineGPSTracker_Xcode.xcarchive \
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU
       working-directory: .
 
     - name: Validate archive
       run: |
-        if [ ! -d $PWD/build/OfflineGPSTracker_Xcode.xcarchive ]; then
+        if [ ! -d "$GITHUB_WORKSPACE/build/OfflineGPSTracker_Xcode.xcarchive" ]; then
           echo "Archive not found or not created correctly!"
           exit 1
         else
           echo "Archive found and created correctly."
-          ls -la $PWD/build/
+          ls -la "$GITHUB_WORKSPACE/build/"
         fi
       working-directory: .
 
     - name: Export IPA
       run: |
         xcodebuild -exportArchive \
-                   -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
-                   -exportOptionsPlist $PWD/ExportOptions.plist \
-                   -exportPath $PWD/build/OfflineGPSTracker_Xcode \
+                   -archivePath "$GITHUB_WORKSPACE/build/OfflineGPSTracker_Xcode.xcarchive" \
+                   -exportOptionsPlist "$GITHUB_WORKSPACE/ExportOptions.plist" \
+                   -exportPath "$GITHUB_WORKSPACE/build/OfflineGPSTracker_Xcode" \
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU \
                    | tee export.log
@@ -86,8 +86,8 @@ jobs:
         LOG_DIR=$(ls -td /var/folders/*/*/*/OfflineGPSTracker_Xcode_*.xcdistributionlogs | head -1)
         echo "Log directory: $LOG_DIR"
         if [ -d "$LOG_DIR" ]; then
-          mkdir -p $GITHUB_WORKSPACE/xcdistributionlogs
-          cp -R "$LOG_DIR"/* $GITHUB_WORKSPACE/xcdistributionlogs/
+          mkdir -p "$GITHUB_WORKSPACE/xcdistributionlogs"
+          cp -R "$LOG_DIR"/* "$GITHUB_WORKSPACE/xcdistributionlogs/"
           echo "Logs copied successfully."
         else
           echo "Log directory not found."
@@ -110,4 +110,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: OfflineGPSTracker_Xcode
-        path: $PWD/build/OfflineGPSTracker_Xcode
+        path: build/OfflineGPSTracker_Xcode
