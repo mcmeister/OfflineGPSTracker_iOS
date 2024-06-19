@@ -37,7 +37,7 @@ jobs:
 
     - name: Build the app
       run: |
-        xcodebuild -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode.xcworkspace \
+        xcodebuild -workspace OfflineGPSTracker_Xcode.xcworkspace \
                    -scheme OfflineGPSTracker_Xcode \
                    -sdk iphonesimulator \
                    -configuration Debug \
@@ -49,33 +49,33 @@ jobs:
 
     - name: Archive the app
       run: |
-        xcodebuild -workspace OfflineGPSTracker_iOS/OfflineGPSTracker_Xcode.xcworkspace \
+        xcodebuild -workspace OfflineGPSTracker_Xcode.xcworkspace \
                    -scheme OfflineGPSTracker_Xcode \
                    -sdk iphonesimulator \
                    -configuration Release \
                    archive \
-                   -archivePath $PWD/OfflineGPSTracker_iOS/build/OfflineGPSTracker_Xcode.xcarchive \
+                   -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU
       working-directory: .
 
     - name: Validate archive
       run: |
-        if [ ! -d $PWD/OfflineGPSTracker_iOS/build/OfflineGPSTracker_Xcode.xcarchive ]; then
+        if [ ! -d $PWD/build/OfflineGPSTracker_Xcode.xcarchive ]; then
           echo "Archive not found or not created correctly!"
           exit 1
         else
           echo "Archive found and created correctly."
-          ls -la $PWD/OfflineGPSTracker_iOS/build/
+          ls -la $PWD/build/
         fi
       working-directory: .
 
     - name: Export IPA
       run: |
         xcodebuild -exportArchive \
-                   -archivePath $PWD/OfflineGPSTracker_iOS/build/OfflineGPSTracker_Xcode.xcarchive \
-                   -exportOptionsPlist $PWD/OfflineGPSTracker_iOS/ExportOptions.plist \
-                   -exportPath $PWD/OfflineGPSTracker_iOS/build/OfflineGPSTracker_Xcode \
+                   -archivePath $PWD/build/OfflineGPSTracker_Xcode.xcarchive \
+                   -exportOptionsPlist $PWD/ExportOptions.plist \
+                   -exportPath $PWD/build/OfflineGPSTracker_Xcode \
                    CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
                    DEVELOPMENT_TEAM=WH83B583SU \
                    | tee export.log
@@ -110,4 +110,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: OfflineGPSTracker_Xcode
-        path: $PWD/OfflineGPSTracker_iOS/build/OfflineGPSTracker_Xcode
+        path: $PWD/build/OfflineGPSTracker_Xcode
