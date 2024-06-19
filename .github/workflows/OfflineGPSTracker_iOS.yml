@@ -83,7 +83,6 @@ jobs:
 
     - name: List build directory contents
       run: ls -la "$GITHUB_WORKSPACE/build/OfflineGPSTracker_Xcode"
-      working-directory: .
 
     - name: Find and copy export logs
       run: |
